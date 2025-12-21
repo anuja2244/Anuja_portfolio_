@@ -5,11 +5,11 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useToast } from '@/hooks/use-toast';
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'anuja@example.com', href: 'mailto:anuja@example.com' },
-  { icon: Phone, label: 'Phone', value: '+1 234 567 890', href: 'tel:+1234567890' },
+  { icon: Mail, label: 'Email', value: 'anujakrishnasamy@gmail.com', href: 'mailto:anujakrishnasamy@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+91 81227 95448', href: 'tel:+918122795448' },
   { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/anuja-k', href: 'https://linkedin.com/in/anuja-k' },
   { icon: Github, label: 'GitHub', value: 'github.com/anuja-k', href: 'https://github.com/anuja-k' },
-  { icon: MapPin, label: 'Location', value: 'Your City, Country', href: '#' },
+  { icon: MapPin, label: 'Location', value: 'Paramathi Velur, Namakkal, India', href: '#' },
 ];
 
 export function ContactSection() {

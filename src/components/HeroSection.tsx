@@ -2,8 +2,8 @@ import { Download, ArrowDown, Mail, Phone, Linkedin, Github } from 'lucide-react
 import { Button } from './ui/button';
 
 const socialLinks = [
-  { icon: Mail, href: 'mailto:anuja@example.com', label: 'Email' },
-  { icon: Phone, href: 'tel:+1234567890', label: 'Phone' },
+  { icon: Mail, href: 'mailto:anujakrishnasamy@gmail.com', label: 'Email' },
+  { icon: Phone, href: 'tel:+918122795448', label: 'Phone' },
   { icon: Linkedin, href: 'https://linkedin.com/in/anuja-k', label: 'LinkedIn' },
   { icon: Github, href: 'https://github.com/anuja-k', label: 'GitHub' },
 ];
@@ -46,9 +46,11 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button variant="neon" size="xl" className="w-full sm:w-auto">
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
+            <Button variant="neon" size="xl" className="w-full sm:w-auto" asChild>
+              <a href="/resume/ANUJA-K-Resume.pdf" download>
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a>
             </Button>
             <Button variant="glass" size="xl" className="w-full sm:w-auto" asChild>
               <a href="#projects">
