@@ -3,6 +3,15 @@ import { ExternalLink, Github, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
+// Import project images
+import flightsDashboard from '@/assets/projects/flights-dashboard.png';
+import titanicDashboard from '@/assets/projects/titanic-dashboard.png';
+import financialDashboard from '@/assets/projects/financial-dashboard.png';
+import hrDashboard from '@/assets/projects/hr-dashboard.png';
+import retailDashboard from '@/assets/projects/retail-dashboard.png';
+import salesDashboard from '@/assets/projects/sales-dashboard.png';
+import stackoverflowDashboard from '@/assets/projects/stackoverflow-dashboard.png';
+
 interface Project {
   id: number;
   title: string;
@@ -17,58 +26,59 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Sales Performance Dashboard',
-    description: 'Interactive Power BI dashboard analyzing sales trends and KPIs',
-    longDescription: 'A comprehensive Power BI dashboard that provides real-time insights into sales performance across multiple regions and product categories. Features include trend analysis, YoY comparisons, and predictive forecasting.',
+    title: 'Flights Delay & Cancellation Dashboard',
+    description: 'Comprehensive analysis of airline delays and cancellations with interactive filters',
+    longDescription: 'An interactive Power BI dashboard analyzing flight delays and cancellations across multiple airlines. Features include delay breakdowns by type (weather, security, departure, arrival, airline), monthly trends, cancellation counts, and average delay metrics with year and airline filters.',
     tools: ['Power BI', 'Excel', 'DAX'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
-    demoLink: '#',
-    githubLink: '#',
+    image: flightsDashboard,
   },
   {
     id: 2,
-    title: 'HR Analytics Dashboard',
-    description: 'Employee analytics and workforce insights visualization',
-    longDescription: 'An HR analytics solution that tracks employee metrics, attrition rates, performance indicators, and diversity statistics. Helps HR teams make data-driven decisions about workforce planning.',
-    tools: ['Power BI', 'SQL', 'Excel'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop',
-    demoLink: '#',
+    title: 'Titanic Survival Analysis Dashboard',
+    description: 'Historical data visualization of Titanic passenger survival statistics',
+    longDescription: 'A visually striking Power BI dashboard analyzing Titanic passenger data. Includes survival rates by class, age distribution by cabin, passenger demographics by embarkation point, gender distribution, and total passenger/survivor counts with interactive filters.',
+    tools: ['Power BI', 'Excel', 'Data Cleaning'],
+    image: titanicDashboard,
   },
   {
     id: 3,
-    title: 'Financial Reporting Dashboard',
-    description: 'Comprehensive financial KPIs and budget analysis',
-    longDescription: 'A financial reporting dashboard that consolidates budget vs actual analysis, expense tracking, revenue trends, and profitability metrics. Designed for executive-level reporting with drill-down capabilities.',
-    tools: ['Power BI', 'Excel', 'Power Query'],
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop',
-    githubLink: '#',
+    title: 'Financial Analysis Dashboard',
+    description: 'Multi-dimensional revenue and sales performance tracking',
+    longDescription: 'A comprehensive financial dashboard tracking revenue across products, stores, and regions. Features include revenue by product category, regional performance analysis, quarterly breakdowns, sales representative performance tables, and comparative revenue visualizations.',
+    tools: ['Power BI', 'Excel', 'DAX', 'Power Query'],
+    image: financialDashboard,
   },
   {
     id: 4,
-    title: 'Customer Analytics Platform',
-    description: 'Customer segmentation and behavior analysis',
-    longDescription: 'A customer analytics platform that segments customers based on purchasing behavior, identifies high-value customers, and tracks customer lifetime value. Includes cohort analysis and churn prediction.',
-    tools: ['Tableau', 'SQL', 'Python'],
-    image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=500&fit=crop',
-    demoLink: '#',
+    title: 'HR Headcount Analysis Dashboard',
+    description: 'Employee demographics and workforce analytics visualization',
+    longDescription: 'An HR analytics dashboard providing insights into workforce composition. Tracks employee headcount trends, age group distributions, gender ratios, geographic distribution by country, business unit breakdown, and job title filters for detailed analysis.',
+    tools: ['Power BI', 'Excel', 'SQL'],
+    image: hrDashboard,
   },
   {
     id: 5,
-    title: 'Supply Chain Dashboard',
-    description: 'Inventory and logistics performance tracking',
-    longDescription: 'A supply chain analytics dashboard monitoring inventory levels, supplier performance, delivery metrics, and warehouse efficiency. Features real-time alerts for stock-outs and delays.',
-    tools: ['Power BI', 'Excel', 'DAX'],
-    image: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&h=500&fit=crop',
+    title: 'Retail Sales Dashboard',
+    description: 'Product category sales analysis with customer segmentation',
+    longDescription: 'A retail analytics dashboard analyzing sales performance across product categories (Electronics, Clothing, Beauty). Includes customer transaction analysis, gender-based purchasing patterns, price trends, and quantity metrics with year-over-year comparisons.',
+    tools: ['Power BI', 'Excel', 'Data Visualization'],
+    image: retailDashboard,
   },
   {
     id: 6,
-    title: 'Marketing Campaign Analytics',
-    description: 'Campaign performance and ROI analysis',
-    longDescription: 'A marketing analytics dashboard that tracks campaign performance across channels, measures ROI, and provides insights into customer acquisition costs and conversion rates.',
-    tools: ['Power BI', 'Excel', 'Google Analytics'],
-    image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=500&fit=crop',
-    demoLink: '#',
-    githubLink: '#',
+    title: 'Sales Dashboard - Monthly',
+    description: 'Monthly sales tracking with category-wise breakdown',
+    longDescription: 'A monthly sales performance dashboard tracking item amounts, cost prices, quantities, and selling prices. Features category-wise analysis (Casual Wear, Semi Formal, Formal), daily trends, and detailed item-level breakdowns for comprehensive sales insights.',
+    tools: ['Power BI', 'Excel', 'DAX'],
+    image: salesDashboard,
+  },
+  {
+    id: 7,
+    title: 'Stack Overflow Developer Survey Dashboard',
+    description: 'Global developer demographics and work preference analysis',
+    longDescription: 'An insightful dashboard analyzing Stack Overflow developer survey data. Visualizes employee age distribution, global geographic distribution, work preferences (freelancer, full-time, part-time), AI tool usage statistics, and coding experience correlations.',
+    tools: ['Power BI', 'Excel', 'Data Analysis'],
+    image: stackoverflowDashboard,
   },
 ];
 
