@@ -4,27 +4,11 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const education = [
   {
     id: 1,
-    degree: 'Master of Computer Applications (MCA)',
-    institution: 'Periyar University',
-    location: 'Salem, Tamil Nadu',
-    duration: '2023 - 2025',
-    description: 'Specialized in Data Analytics and Business Intelligence. Gained expertise in database management, programming, and data visualization.',
-  },
-  {
-    id: 2,
-    degree: 'Bachelor of Computer Applications (BCA)',
-    institution: 'Periyar University',
-    location: 'Salem, Tamil Nadu',
-    duration: '2020 - 2023',
-    description: 'Foundation in computer science fundamentals, programming languages, and software development.',
-  },
-  {
-    id: 3,
-    degree: 'Higher Secondary Education (HSC)',
-    institution: 'State Board of Tamil Nadu',
-    location: 'Namakkal, Tamil Nadu',
-    duration: '2018 - 2020',
-    description: 'Completed higher secondary education with focus on Computer Science and Mathematics.',
+    degree: 'B.Tech - Artificial Intelligence & Data Science',
+    institution: 'Rrase College of Engineering',
+    location: 'Vanchuvancheri, Padappai',
+    duration: '2023 - 2027',
+    description: 'Pursuing Bachelor of Technology in Artificial Intelligence & Data Science. Learning advanced AI, machine learning, data analytics, and modern data science techniques.',
   },
 ];
 
