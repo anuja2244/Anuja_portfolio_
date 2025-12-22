@@ -27,11 +27,6 @@ export function HeroSection() {
       <div className="container relative z-10 px-4 md:px-6 text-center">
         {/* Main Content */}
         <div className="space-y-6 animate-slide-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 glass-card text-sm font-mono text-primary">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Available for Opportunities
-          </div>
-
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
             <span className="block text-foreground">Anuja K</span>
           </h1>

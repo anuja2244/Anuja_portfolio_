@@ -30,7 +30,7 @@ const projects: Project[] = [
     title: 'Flights Delay & Cancellation Dashboard',
     description: 'Comprehensive analysis of airline delays and cancellations with interactive filters',
     longDescription: 'An interactive Power BI dashboard analyzing flight delays and cancellations across multiple airlines. Features include delay breakdowns by type (weather, security, departure, arrival, airline), monthly trends, cancellation counts, and average delay metrics with year and airline filters.',
-    tools: ['Power BI', 'Excel', 'DAX'],
+    tools: ['Power BI', 'Excel'],
     image: flightsDashboard,
   },
   {
@@ -38,7 +38,7 @@ const projects: Project[] = [
     title: 'Titanic Survival Analysis Dashboard',
     description: 'Historical data visualization of Titanic passenger survival statistics',
     longDescription: 'A visually striking Power BI dashboard analyzing Titanic passenger data. Includes survival rates by class, age distribution by cabin, passenger demographics by embarkation point, gender distribution, and total passenger/survivor counts with interactive filters.',
-    tools: ['Power BI', 'Excel', 'Data Cleaning'],
+    tools: ['Power BI', 'Excel'],
     image: titanicDashboard,
   },
   {
@@ -46,7 +46,7 @@ const projects: Project[] = [
     title: 'Financial Analysis Dashboard',
     description: 'Multi-dimensional revenue and sales performance tracking',
     longDescription: 'A comprehensive financial dashboard tracking revenue across products, stores, and regions. Features include revenue by product category, regional performance analysis, quarterly breakdowns, sales representative performance tables, and comparative revenue visualizations.',
-    tools: ['Power BI', 'Excel', 'DAX', 'Power Query'],
+    tools: ['Power BI', 'Excel', 'Power Query'],
     image: financialDashboard,
   },
   {
@@ -54,7 +54,7 @@ const projects: Project[] = [
     title: 'HR Headcount Analysis Dashboard',
     description: 'Employee demographics and workforce analytics visualization',
     longDescription: 'An HR analytics dashboard providing insights into workforce composition. Tracks employee headcount trends, age group distributions, gender ratios, geographic distribution by country, business unit breakdown, and job title filters for detailed analysis.',
-    tools: ['Power BI', 'Excel', 'SQL'],
+    tools: ['Power BI', 'Excel'],
     image: hrDashboard,
   },
   {
@@ -70,7 +70,7 @@ const projects: Project[] = [
     title: 'Sales Dashboard - Monthly',
     description: 'Monthly sales tracking with category-wise breakdown',
     longDescription: 'A monthly sales performance dashboard tracking item amounts, cost prices, quantities, and selling prices. Features category-wise analysis (Casual Wear, Semi Formal, Formal), daily trends, and detailed item-level breakdowns for comprehensive sales insights.',
-    tools: ['Power BI', 'Excel', 'DAX'],
+    tools: ['Power BI', 'Excel'],
     image: salesDashboard,
   },
   {
