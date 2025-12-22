@@ -6,7 +6,6 @@ import {
   Database, 
   Code2, 
   Sparkles,
-  Layers,
   FileText
 } from 'lucide-react';
 
@@ -18,7 +17,6 @@ const skills = [
   { name: 'Microsoft Office', level: 95, icon: FileText, category: 'Tools' },
   { name: 'Python (Basics)', level: 60, icon: Code2, category: 'Programming' },
   { name: 'SQL (Basics)', level: 65, icon: Database, category: 'Programming' },
-  { name: 'Data Cleaning', level: 85, icon: Layers, category: 'Core Skills' },
 ];
 
 export function SkillsSection() {
@@ -88,24 +86,6 @@ export function SkillsSection() {
           ))}
         </div>
 
-        {/* Additional Skills Tags */}
-        <div
-          className={`mt-12 text-center ${
-            isVisible ? 'animate-slide-up delay-500' : 'opacity-0'
-          }`}
-        >
-          <p className="text-sm text-muted-foreground mb-4">Also familiar with:</p>
-          <div className="flex flex-wrap justify-center gap-2">
-            {['DAX', 'Power Query', 'ETL', 'Data Modeling', 'KPI Analysis', 'Report Design'].map((tag) => (
-              <span
-                key={tag}
-                className="px-4 py-2 glass-card text-sm font-medium hover:border-primary/50 transition-colors cursor-default"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
