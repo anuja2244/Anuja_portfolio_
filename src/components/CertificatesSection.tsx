@@ -1,54 +1,55 @@
-import { Award, ExternalLink } from 'lucide-react';
+import { Award } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
+import powerbiNextgen from '@/assets/certificates/powerbi-nextgen.jpeg';
+import powerbiOfficemaster from '@/assets/certificates/powerbi-officemaster.jpeg';
+import excelChatgpt from '@/assets/certificates/excel-chatgpt.jpeg';
+import dataAnalyticsNovitech from '@/assets/certificates/data-analytics-novitech.jpeg';
+import powerbiGbtech from '@/assets/certificates/powerbi-gbtech.jpeg';
+import icatParticipation from '@/assets/certificates/icat-participation.jpeg';
 
 const certificates = [
   {
     id: 1,
-    title: 'Microsoft Power BI Data Analyst',
-    issuer: 'Microsoft',
-    date: '2024',
-    image: 'https://images.unsplash.com/photo-1496200186974-4293800e2c20?w=400&h=300&fit=crop',
-    credentialLink: '#',
+    title: 'Mastering Power BI for Data Visualization and Business Intelligence',
+    issuer: 'NextGen Technologies',
+    date: 'December 2024',
+    image: powerbiNextgen,
   },
   {
     id: 2,
-    title: 'Google Data Analytics Professional',
-    issuer: 'Google',
-    date: '2024',
-    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=300&fit=crop',
-    credentialLink: '#',
+    title: 'PowerBI Workshop - AI-Powered Interactive Dashboards',
+    issuer: 'OfficeMaster',
+    date: 'July 2025',
+    image: powerbiOfficemaster,
   },
   {
     id: 3,
-    title: 'Tableau Desktop Specialist',
-    issuer: 'Tableau',
-    date: '2023',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
-    credentialLink: '#',
+    title: 'Excel Automation using ChatGPT',
+    issuer: 'Microsoft & Simplilearn SkillUp',
+    date: 'July 2025',
+    image: excelChatgpt,
   },
   {
     id: 4,
-    title: 'SQL for Data Science',
-    issuer: 'Coursera',
-    date: '2023',
-    image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=300&fit=crop',
-    credentialLink: '#',
+    title: '30 Days MasterClass in Data Analytics',
+    issuer: 'NoviTech R&D Private Limited',
+    date: 'October - December 2024',
+    image: dataAnalyticsNovitech,
   },
   {
     id: 5,
-    title: 'Advanced Excel for Business',
-    issuer: 'LinkedIn Learning',
-    date: '2023',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
-    credentialLink: '#',
+    title: 'Hands-on Experience on Power BI Workshop',
+    issuer: 'GB Tech Corp & NextGen Technologies',
+    date: 'October 2024',
+    image: powerbiGbtech,
   },
   {
     id: 6,
-    title: 'Python for Data Analysis',
-    issuer: 'DataCamp',
-    date: '2024',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop',
-    credentialLink: '#',
+    title: 'Internship Common Aptitude Test (iCAT)',
+    issuer: 'iCAT',
+    date: 'June 2025',
+    image: icatParticipation,
   },
 ];
 
@@ -93,13 +94,13 @@ export function CertificatesSection() {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Image */}
-              <div className="relative h-40 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
                 
                 {/* Award Badge */}
                 <div className="absolute top-4 right-4 p-2 glass-card rounded-full">
@@ -109,24 +110,11 @@ export function CertificatesSection() {
 
               {/* Content */}
               <div className="p-6">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">
-                      {cert.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{cert.date}</p>
-                  </div>
-                  <a
-                    href={cert.credentialLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg hover:bg-primary/10 transition-colors"
-                    aria-label="View credential"
-                  >
-                    <ExternalLink className="h-4 w-4 text-muted-foreground hover:text-primary" />
-                  </a>
-                </div>
+                <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  {cert.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                <p className="text-xs text-muted-foreground mt-1">{cert.date}</p>
               </div>
             </div>
           ))}
