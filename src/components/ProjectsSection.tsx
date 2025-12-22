@@ -11,6 +11,7 @@ import hrDashboard from '@/assets/projects/hr-dashboard.png';
 import retailDashboard from '@/assets/projects/retail-dashboard.png';
 import salesDashboard from '@/assets/projects/sales-dashboard.png';
 import stackoverflowDashboard from '@/assets/projects/stackoverflow-dashboard.png';
+import covidTableauDashboard from '@/assets/projects/covid-tableau-dashboard.jpeg';
 
 interface Project {
   id: number;
@@ -80,6 +81,14 @@ const projects: Project[] = [
     tools: ['Power BI', 'Excel', 'Data Analysis'],
     image: stackoverflowDashboard,
   },
+  {
+    id: 8,
+    title: 'COVID-19 Dashboard Analysis in India',
+    description: 'Comprehensive analysis of COVID-19 cases, vaccinations, and testing across Indian states',
+    longDescription: 'A detailed Tableau dashboard analyzing COVID-19 pandemic data across India. Features include state-wise case trends, gender distribution, age group analysis, first vs second dose vaccination comparison, vaccine-wise administration (Covaxin, CoviShield, Sputnik V), ICMRT testing labs distribution, state-wise testing details, and an interactive map showing total deaths by state.',
+    tools: ['Tableau', 'Excel', 'Data Visualization'],
+    image: covidTableauDashboard,
+  },
 ];
 
 export function ProjectsSection() {
@@ -107,10 +116,9 @@ export function ProjectsSection() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">
-            A showcase of Power BI dashboards and data visualization projects
+            A showcase of Power BI and Tableau dashboards and data visualization projects
           </p>
         </div>
-
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
