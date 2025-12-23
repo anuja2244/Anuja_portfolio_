@@ -15,6 +15,7 @@ const certificates = [
     issuer: 'NextGen Technologies',
     date: 'December 2024',
     image: powerbiNextgen,
+    objectPosition: 'object-top',
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const certificates = [
     issuer: 'OfficeMaster',
     date: 'July 2025',
     image: powerbiOfficemaster,
+    objectPosition: 'object-top',
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const certificates = [
     issuer: 'Microsoft & Simplilearn SkillUp',
     date: 'July 2025',
     image: excelChatgpt,
+    objectPosition: 'object-top',
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ const certificates = [
     issuer: 'NoviTech R&D Private Limited',
     date: 'October - December 2024',
     image: dataAnalyticsNovitech,
+    objectPosition: 'object-center',
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ const certificates = [
     issuer: 'GB Tech Corp & NextGen Technologies',
     date: 'October 2024',
     image: powerbiGbtech,
+    objectPosition: 'object-top',
   },
   {
     id: 6,
@@ -50,6 +55,7 @@ const certificates = [
     issuer: 'iCAT',
     date: 'June 2025',
     image: icatParticipation,
+    objectPosition: 'object-top',
   },
 ];
 
@@ -97,7 +103,7 @@ export function CertificatesSection() {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className={`w-full h-full object-cover ${cert.objectPosition} transition-transform duration-500 group-hover:scale-105`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
                 
