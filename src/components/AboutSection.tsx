@@ -44,10 +44,6 @@ export function AboutSection() {
               isVisible ? 'animate-slide-up' : 'opacity-0'
             }`}
           >
-            <div className="inline-block">
-              <span className="text-primary font-mono text-sm">// About Me</span>
-            </div>
-            
             <h2 className="section-title">
               Turning Data Into
               <span className="gradient-text"> Strategic Assets</span>

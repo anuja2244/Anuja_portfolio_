@@ -40,8 +40,7 @@ export function SkillsSection() {
             isVisible ? 'animate-slide-up' : 'opacity-0'
           }`}
         >
-          <span className="text-primary font-mono text-sm">// My Skills</span>
-          <h2 className="section-title mt-2">
+          <h2 className="section-title">
             Technical <span className="gradient-text">Expertise</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">
@@ -64,10 +63,7 @@ export function SkillsSection() {
                   <skill.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-semibold">{skill.name}</h3>
-                    <span className="text-sm font-mono text-primary">{skill.level}%</span>
-                  </div>
+                  <h3 className="font-semibold">{skill.name}</h3>
                   <span className="text-xs text-muted-foreground">{skill.category}</span>
                 </div>
               </div>
