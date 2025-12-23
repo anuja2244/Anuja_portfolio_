@@ -1,5 +1,6 @@
 import { Download, ArrowDown, Mail, Phone, Linkedin, Github } from 'lucide-react';
 import { Button } from './ui/button';
+import profilePhoto from '@/assets/profile-photo.jpeg';
 
 const socialLinks = [
   { icon: Mail, href: 'mailto:anujakrishnasamy@gmail.com', label: 'Email' },
@@ -27,6 +28,16 @@ export function HeroSection() {
       <div className="container relative z-10 px-4 md:px-6 text-center">
         {/* Main Content */}
         <div className="space-y-6 animate-slide-up">
+          {/* Profile Photo */}
+          <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-4">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent blur-lg opacity-50" />
+            <img
+              src={profilePhoto}
+              alt="Anuja K - Data Analyst & BI Developer"
+              className="relative w-full h-full rounded-full object-cover border-4 border-primary/30 shadow-2xl"
+            />
+          </div>
+
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
             <span className="block text-foreground">Anuja K</span>
           </h1>
