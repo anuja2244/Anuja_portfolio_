@@ -7,6 +7,7 @@ import excelChatgpt from '@/assets/certificates/excel-chatgpt.jpeg';
 import dataAnalyticsNovitech from '@/assets/certificates/data-analytics-novitech.jpeg';
 import powerbiGbtech from '@/assets/certificates/powerbi-gbtech.jpeg';
 import icatParticipation from '@/assets/certificates/icat-participation.jpeg';
+import skillcraftInternship from '@/assets/certificates/skillcraft-internship.jpeg';
 
 const certificates = [
   {
@@ -55,6 +56,14 @@ const certificates = [
     issuer: 'iCAT',
     date: 'June 2025',
     image: icatParticipation,
+    objectPosition: 'object-top',
+  },
+  {
+    id: 7,
+    title: 'Data Science Internship',
+    issuer: 'SkillCraft Technology',
+    date: 'July - August 2025',
+    image: skillcraftInternship,
     objectPosition: 'object-top',
   },
 ];
