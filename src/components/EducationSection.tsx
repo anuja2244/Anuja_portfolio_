@@ -32,8 +32,7 @@ export function EducationSection() {
             isVisible ? 'animate-slide-up' : 'opacity-0'
           }`}
         >
-          <span className="text-primary font-mono text-sm">// Academic Background</span>
-          <h2 className="section-title mt-2">
+          <h2 className="section-title">
             My <span className="gradient-text">Education</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">

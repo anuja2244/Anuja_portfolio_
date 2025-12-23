@@ -74,8 +74,7 @@ export function CertificatesSection() {
             isVisible ? 'animate-slide-up' : 'opacity-0'
           }`}
         >
-          <span className="text-primary font-mono text-sm">// Achievements</span>
-          <h2 className="section-title mt-2">
+          <h2 className="section-title">
             Professional <span className="gradient-text">Certifications</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">
