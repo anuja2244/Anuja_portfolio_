@@ -36,13 +36,8 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a
-            href="#home"
-            className="text-xl md:text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
-          >
-            AK
-          </a>
+          {/* Spacer for layout balance */}
+          <div className="w-8" />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
