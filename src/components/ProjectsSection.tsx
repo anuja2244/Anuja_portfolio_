@@ -22,6 +22,7 @@ interface Project {
   image: string;
   demoLink?: string;
   githubLink?: string;
+  videoLink?: string;
 }
 
 const projects: Project[] = [
@@ -88,6 +89,23 @@ const projects: Project[] = [
     longDescription: 'A detailed Tableau dashboard analyzing COVID-19 pandemic data across India. Features include state-wise case trends, gender distribution, age group analysis, first vs second dose vaccination comparison, vaccine-wise administration (Covaxin, CoviShield, Sputnik V), ICMRT testing labs distribution, state-wise testing details, and an interactive map showing total deaths by state.',
     tools: ['Tableau', 'Excel', 'Data Visualization'],
     image: covidTableauDashboard,
+  },
+  {
+    id: 9,
+    title: 'Desert Travel Website',
+    description: 'A modern, responsive travel website built with AI-powered web development',
+    longDescription: 'A fully responsive travel website showcasing desert destinations, built using AI-powered web development tools. Features modern UI design, smooth animations, interactive sections, and an engaging user experience optimized for all devices.',
+    tools: ['React', 'Tailwind CSS', 'AI-Powered Development'],
+    image: '/placeholder.svg',
+    demoLink: 'https://desertwebsite.lovable.app',
+  },
+  {
+    id: 10,
+    title: 'Voice Assistant AI',
+    description: 'Python-based voice assistant that opens apps and browsers via voice commands',
+    longDescription: 'A simple yet powerful voice assistant built with Python that listens to user voice commands and performs actions like opening applications, launching websites in the browser, and more. Built using speech recognition libraries to convert voice into actionable commands.',
+    tools: ['Python', 'Speech Recognition', 'AI'],
+    image: '/placeholder.svg',
   },
 ];
 

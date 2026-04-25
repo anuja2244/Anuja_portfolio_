@@ -43,7 +43,7 @@ export function HeroSection() {
           </h1>
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold gradient-text">
-            Data Analyst & BI Developer
+            Aspiring Data Analyst & BI Developer
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">

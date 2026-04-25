@@ -6,17 +6,19 @@ import {
   Database, 
   Code2, 
   Sparkles,
-  FileText
+  FileText,
+  Wand2
 } from 'lucide-react';
 
 const skills = [
-  { name: 'Power BI', level: 90, icon: BarChart3, category: 'BI Tools' },
-  { name: 'Tableau', level: 80, icon: PieChart, category: 'BI Tools' },
-  { name: 'Data Visualization', level: 88, icon: Sparkles, category: 'Core Skills' },
-  { name: 'Excel', level: 92, icon: FileSpreadsheet, category: 'Tools' },
-  { name: 'Microsoft Office', level: 95, icon: FileText, category: 'Tools' },
-  { name: 'Python (Basics)', level: 60, icon: Code2, category: 'Programming' },
-  { name: 'SQL (Basics)', level: 65, icon: Database, category: 'Programming' },
+  { name: 'Power BI', icon: BarChart3, category: 'BI Tools' },
+  { name: 'Tableau', icon: PieChart, category: 'BI Tools' },
+  { name: 'Data Visualization', icon: Sparkles, category: 'Core Skills' },
+  { name: 'Excel', icon: FileSpreadsheet, category: 'Tools' },
+  { name: 'Microsoft Office', icon: FileText, category: 'Tools' },
+  { name: 'AI Powered Web Development', icon: Wand2, category: 'Web Development' },
+  { name: 'Python (Basics)', icon: Code2, category: 'Programming' },
+  { name: 'SQL (Basics)', icon: Database, category: 'Programming' },
 ];
 
 export function SkillsSection() {
@@ -66,17 +68,6 @@ export function SkillsSection() {
                   <h3 className="font-semibold">{skill.name}</h3>
                   <span className="text-xs text-muted-foreground">{skill.category}</span>
                 </div>
-              </div>
-              
-              {/* Progress Bar */}
-              <div className="skill-bar">
-                <div
-                  className="skill-bar-fill"
-                  style={{
-                    width: isVisible ? `${skill.level}%` : '0%',
-                    transitionDelay: `${index * 100}ms`,
-                  }}
-                />
               </div>
             </div>
           ))}
