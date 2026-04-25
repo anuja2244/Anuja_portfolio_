@@ -1,4 +1,4 @@
-import { Download, ArrowDown, Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { Eye, ArrowDown, Mail, Phone, Linkedin, Github } from 'lucide-react';
 import { Button } from './ui/button';
 import profilePhoto from '@/assets/profile-photo.jpeg';
 
@@ -29,12 +29,12 @@ export function HeroSection() {
         {/* Main Content */}
         <div className="space-y-6 animate-slide-up">
           {/* Profile Photo */}
-          <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-4">
+          <div className="relative w-36 h-36 md:w-44 md:h-44 mx-auto mb-2">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent blur-lg opacity-50" />
             <img
               src={profilePhoto}
               alt="Anuja K - Data Analyst & BI Developer"
-              className="relative w-full h-full rounded-full object-cover object-top border-4 border-primary/30 shadow-2xl"
+              className="relative w-full h-full rounded-full object-cover object-center border-4 border-primary/30 shadow-2xl"
             />
           </div>
 
@@ -53,9 +53,9 @@ export function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button variant="neon" size="xl" className="w-full sm:w-auto" asChild>
-              <a href="/resume/ANUJA-K-Resume.pdf" download>
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
+              <a href="/resume/ANUJA-K-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Eye className="mr-2 h-5 w-5" />
+                View Resume
               </a>
             </Button>
             <Button variant="glass" size="xl" className="w-full sm:w-auto" asChild>
