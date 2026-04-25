@@ -1,6 +1,10 @@
-import { Eye, ArrowDown, Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { useState } from 'react';
+import { Eye, ArrowDown, Mail, Phone, Linkedin, Github, Download, X } from 'lucide-react';
 import { Button } from './ui/button';
+import { Dialog, DialogContent, DialogTitle } from './ui/dialog';
 import profilePhoto from '@/assets/profile-photo.jpeg';
+
+const RESUME_URL = '/resume/ANUJA-K-Resume.pdf';
 
 const socialLinks = [
   { icon: Mail, href: 'mailto:anujakrishnasamy@gmail.com', label: 'Email' },
@@ -10,6 +14,8 @@ const socialLinks = [
 ];
 
 export function HeroSection() {
+  const [resumeOpen, setResumeOpen] = useState(false);
+
   return (
     <section
       id="home"
@@ -54,10 +60,10 @@ export function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button variant="neon" size="xl" className="w-full sm:w-auto" asChild>
-              <a href="/resume/ANUJA-K-Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <button type="button" onClick={() => setResumeOpen(true)}>
                 <Eye className="mr-2 h-5 w-5" />
                 View Resume
-              </a>
+              </button>
             </Button>
             <Button variant="glass" size="xl" className="w-full sm:w-auto" asChild>
               <a href="#projects">
@@ -91,6 +97,32 @@ export function HeroSection() {
           </a>
         </div>
       </div>
+
+      {/* Resume Viewer Modal */}
+      <Dialog open={resumeOpen} onOpenChange={setResumeOpen}>
+        <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 overflow-hidden flex flex-col gap-0">
+          <DialogTitle className="sr-only">Anuja K Resume</DialogTitle>
+          <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-card">
+            <h3 className="text-base font-semibold">Anuja K — Resume</h3>
+            <div className="flex items-center gap-2">
+              <Button variant="glass" size="sm" asChild>
+                <a href={RESUME_URL} download="ANUJA-K-Resume.pdf">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" onClick={() => setResumeOpen(false)} aria-label="Close">
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+          <iframe
+            src={`${RESUME_URL}#view=FitH`}
+            title="Anuja K Resume"
+            className="w-full flex-1 bg-background"
+          />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
