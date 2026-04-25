@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogTitle } from './ui/dialog';
 import profilePhoto from '@/assets/profile-photo.jpeg';
 
 const RESUME_URL = '/resume/ANUJA-K-Resume.pdf';
+const RESUME_PAGES = ['/resume/pages/page-1.jpg', '/resume/pages/page-2.jpg'];
 
 const socialLinks = [
   { icon: Mail, href: 'mailto:anujakrishnasamy@gmail.com', label: 'Email' },
@@ -116,11 +117,19 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-          <iframe
-            src={`${RESUME_URL}#view=FitH`}
-            title="Anuja K Resume"
-            className="w-full flex-1 bg-background"
-          />
+          <div className="flex-1 overflow-auto bg-muted/30 p-4">
+            <div className="flex flex-col items-center gap-4">
+              {RESUME_PAGES.map((src, i) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`Anuja K Resume - Page ${i + 1}`}
+                  className="w-full max-w-3xl rounded-md shadow-lg bg-white"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                />
+              ))}
+            </div>
+          </div>
         </DialogContent>
       </Dialog>
     </section>
