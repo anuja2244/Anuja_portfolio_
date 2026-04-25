@@ -12,6 +12,7 @@ import retailDashboard from '@/assets/projects/retail-dashboard.png';
 import salesDashboard from '@/assets/projects/sales-dashboard.png';
 import stackoverflowDashboard from '@/assets/projects/stackoverflow-dashboard.png';
 import covidTableauDashboard from '@/assets/projects/covid-tableau-dashboard.jpeg';
+import voiceAssistantDemo from '@/assets/projects/voice-assistant-demo.mp4';
 
 interface Project {
   id: number;
@@ -23,6 +24,7 @@ interface Project {
   demoLink?: string;
   githubLink?: string;
   videoLink?: string;
+  video?: string;
 }
 
 const projects: Project[] = [
@@ -106,6 +108,7 @@ const projects: Project[] = [
     longDescription: 'A simple yet powerful voice assistant built with Python that listens to user voice commands and performs actions like opening applications, launching websites in the browser, and more. Built using speech recognition libraries to convert voice into actionable commands.',
     tools: ['Python', 'Speech Recognition', 'AI'],
     image: '/placeholder.svg',
+    video: voiceAssistantDemo,
   },
 ];
 
@@ -149,11 +152,22 @@ export function ProjectsSection() {
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60" />
                 <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
@@ -195,11 +209,22 @@ export function ProjectsSection() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative">
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full h-64 object-cover"
-              />
+              {selectedProject.video ? (
+                <video
+                  src={selectedProject.video}
+                  className="w-full h-64 object-cover"
+                  controls
+                  autoPlay
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-64 object-cover"
+                />
+              )}
               <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 p-2 glass-card rounded-full hover:bg-destructive/20 transition-colors"
