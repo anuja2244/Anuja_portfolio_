@@ -34,7 +34,8 @@ export function HeroSection() {
             <img
               src={profilePhoto}
               alt="Anuja K - Data Analyst & BI Developer"
-              className="relative w-full h-full rounded-full object-cover object-center border-4 border-primary/30 shadow-2xl"
+              className="relative w-full h-full rounded-full object-cover border-4 border-primary/30 shadow-2xl"
+              style={{ objectPosition: '50% 18%' }}
             />
           </div>
 
