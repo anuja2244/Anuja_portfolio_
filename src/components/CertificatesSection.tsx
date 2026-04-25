@@ -8,6 +8,7 @@ import dataAnalyticsNovitech from '@/assets/certificates/data-analytics-novitech
 import powerbiGbtech from '@/assets/certificates/powerbi-gbtech.jpeg';
 import icatParticipation from '@/assets/certificates/icat-participation.jpeg';
 import skillcraftInternship from '@/assets/certificates/skillcraft-internship.jpeg';
+import oracleSqlCodetalon from '@/assets/certificates/oracle-sql-codetalon.jpeg';
 
 const certificates = [
   {
@@ -65,6 +66,14 @@ const certificates = [
     date: 'July - August 2025',
     image: skillcraftInternship,
     objectPosition: 'object-top',
+  },
+  {
+    id: 8,
+    title: 'Oracle SQL Workshop',
+    issuer: 'CodeTalon',
+    date: 'February 2026',
+    image: oracleSqlCodetalon,
+    objectPosition: 'object-center',
   },
 ];
 
